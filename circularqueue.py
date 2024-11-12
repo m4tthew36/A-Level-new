@@ -22,6 +22,28 @@ def enqueue(item):
     else: 
         print("Queue Full")
 
+def dequeue():
+    global rear 
+    global front 
+    
+    if front == -1: 
+        return -1 
+    else: 
+        item = queue[front]
+        if front == rear: 
+            front = -1 
+            rear = -1 
+        else: 
+            front = (front + 1 ) % maxSize 
+        return item 
+
+    
+
+
 
 enqueue("it")
+displayQueue()
+dequeue()
+
+
 displayQueue()
