@@ -25,7 +25,7 @@ def enqueue(item):
 def dequeue():
     global rear 
     global front 
-    
+
     if front == -1: 
         return -1 
     else: 
@@ -38,12 +38,18 @@ def dequeue():
         return item 
 
     
+import os 
+
+while True: 
+
+    method = input("E or D").lower()
+    os.system("clear")
+    if method == "e": 
+        data = input("Enter item to put into queue ")
+        enqueue(data)
+    elif method == "d": 
+        data = dequeue()
+        print(data)
 
 
 
-enqueue("it")
-displayQueue()
-dequeue()
-
-
-displayQueue()
