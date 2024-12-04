@@ -1,3 +1,5 @@
+import os 
+
 maxSize = 10
 queue = ["-" for _ in range(10)]
 
@@ -38,8 +40,6 @@ def dequeue():
         return item 
 
     
-import os 
-
 while True: 
 
     method = input("E or D").lower()
