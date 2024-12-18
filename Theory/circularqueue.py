@@ -42,7 +42,7 @@ def dequeue():
     
 while True: 
 
-    method = input("E or D").lower()
+    method = input("E or D: ").lower()
     os.system("clear")
     if method == "e": 
         data = input("Enter item to put into queue ")
@@ -51,5 +51,6 @@ while True:
         data = dequeue()
         print(data)
 
+    displayQueue()
 
 
